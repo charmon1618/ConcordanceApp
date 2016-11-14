@@ -107,9 +107,3 @@ namespace TotalDefenseConcordance
         public string Word { get; set; }
     }
 }
-
-//5mins: stubbing out getting the test data in from a file and read to a string. Looked up a few things on SO because I had forgotten.
-
-//5mins: Next, I will break by sentence, and have a collection of sentences. Looked up a regex to do the splitting without mistaking "e.g." as a sentence delimiter. 
-//40 so far (4:47) Then, I will create a method which accepts them, in order, and keeps a word count and the enumeration of each sentence the word occurred in.
-//Finally, I will test it and see if it matches the output in the e-mail that was sent to me. 
