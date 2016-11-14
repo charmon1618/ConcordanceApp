@@ -36,11 +36,22 @@ namespace TotalDefenseConcordance
             foreach (var line in outputList)
             {
                 var sentenceList = new StringBuilder();
-                foreach (var lineNumber in line.Sentences)
+
+                for (int i = 0; i < line.Sentences.Count; i++)
                 {
-                    sentenceList.Append(" " + lineNumber.ToString());
+
+                    if (i < line.Sentences.Count - 1)
+                    {
+                        sentenceList.Append(" " + line.Sentences[i].ToString() + ",");
+                    }
+
+                    if (i == line.Sentences.Count - 1)
+                    {
+                        sentenceList.Append(" " + line.Sentences[i].ToString() + ".");
+                    }
                 }
-                Console.WriteLine(line.Word + " appeared " + line.Count + " times, and was in lines:" + sentenceList);
+
+                Console.WriteLine("The word: "+ line.Word + " appeared " + line.Count + " times, and was in lines:" + sentenceList);
             }
         }
     }
